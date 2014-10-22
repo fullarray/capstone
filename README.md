@@ -8,7 +8,7 @@ To submit your changes follow the commands below*
 
 Git init
 Git Add default.aspx (you can specify any file you change)
-Git Commit 'Use this string explains your changes briefly'
+Git Commit -m 'Use this string explains your changes briefly'
 Git remote add origin https://github.com/fullarray/capstone
 Git push origin master
 
