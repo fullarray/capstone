@@ -6,10 +6,10 @@ Group 1 only.
 To submit your changes follow the commands below*
 *************************************************
 
-Git init
-Git Add default.aspx (you can specify any file you change)
-Git Commit -m 'Use this string explains your changes briefly'
-Git remote add origin https://github.com/fullarray/capstone
+Git init </br>
+Git Add default.aspx (you can specify any file you change)</br>
+Git Commit -m 'Use this string explains your changes briefly'</br>
+Git remote add origin https://github.com/fullarray/capstone</br>
 Git push origin master
 
 ***************************************
