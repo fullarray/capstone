@@ -1,7 +1,6 @@
 This is Broward College's Capstone course repository.This is for Group 1 only.
 ------------------------------------------------------------------------------
 
-=================================================
 To submit your changes follow the commands below
 =================================================
 
