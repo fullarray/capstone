@@ -143,7 +143,9 @@ Partial Class CreateAQuestion
 
         connetionString = "Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-BrowardCollegeFeedback1-20140629104817;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-BrowardCollegeFeedback1-20140629104817.mdf"
         'Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-BrowardCollegeFeedback1-20140629104817;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-BrowardCollegeFeedback1-20140629104817.mdf
-        sql = "select * from question '( QuestionTypeID ) Values ('" + DropDownList5.SelectedValue.ToString + ",1)"
+        'sql = "select * from question '( QuestionTypeID ) Values ('" + DropDownList5.SelectedValue.ToString + ",1)"
+        'Keiron - comment statement above --- added and changed below
+        sql = "update question set isactive = 0 where QuestionID =" + DropDownList3.SelectedValue.ToString()
 
 
 
@@ -154,11 +156,17 @@ Partial Class CreateAQuestion
 
             connection.Open()
             command = New SqlCommand(sql, connection)
+            'Keiron - added line below
+            command.ExecuteNonQuery()
             adapter.SelectCommand = command
             adapter.Fill(ds)
             adapter.Dispose()
             command.Dispose()
             connection.Close()
+
+            'Keiron - added the next two lines
+            DropDownList3.DataBind()
+            DropDownList4.DataBind()
 
             For i = 0 To ds.Tables(0).Rows.Count - 1
 
@@ -170,7 +178,53 @@ Partial Class CreateAQuestion
 
 
     End Sub
+    Protected Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
 
+
+        Dim dsQuestions As DataSet
+        Dim connetionString As String
+        Dim connection As SqlConnection
+        Dim command As SqlCommand
+        Dim adapter As New SqlDataAdapter
+        Dim ds As New DataSet
+        Dim i As Integer
+        Dim sql As String
+
+
+
+        connetionString = "Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-BrowardCollegeFeedback1-20140629104817;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-BrowardCollegeFeedback1-20140629104817.mdf"
+        sql = "update question set isactive = 1 where QuestionID =" + DropDownList4.SelectedValue.ToString()
+
+
+
+        connection = New SqlConnection(connetionString)
+
+        Try
+
+
+            connection.Open()
+            command = New SqlCommand(sql, connection)
+            command.ExecuteNonQuery()
+            adapter.SelectCommand = command
+            adapter.Fill(ds)
+            adapter.Dispose()
+            command.Dispose()
+            connection.Close()
+
+            DropDownList3.DataBind()
+            DropDownList4.DataBind()
+
+            For i = 0 To ds.Tables(0).Rows.Count - 1
+
+            Next
+        Catch ex As Exception
+
+        End Try
+
+
+
+
+    End Sub
 
 
 
