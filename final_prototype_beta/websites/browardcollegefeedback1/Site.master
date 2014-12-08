@@ -28,7 +28,7 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, user-scalable=no;">
-    <meta name="author" content="Designed and Impletemented by Jonathan H. while participating in Group One Broward College Capstone 2014">
+    <meta name="author" content="Documents written by Maria B. and Octavio V., associate programmers Keiron C. and Beaudelaire D., and designed and impletemented by project lead Jonathan H. while participating in Group One Broward College Capstone 2014">
     <meta name="dcterms.rightsholder" content="Jonathan H. Broward College Capstone 2014 Group 1">
     <meta name="dcterms.rights" content="Jonathan H. and Broward College Capstone 2014 Group 1">
     <meta name="dcterms.dateCopyrighted" content="2014">
