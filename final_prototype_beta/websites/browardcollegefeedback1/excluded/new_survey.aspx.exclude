@@ -1,0 +1,266 @@
+﻿    <%@ Page Title="Broward College Survey" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="new_survey.aspx.vb" Inherits="_Survey" %>
+
+	<!--*********************************************************************
+         Bug fixed by Jonathan H. (in new_survey.aspx only; see other pages for more comments and bug fixes)
+         -------------------------------
+         -File excluded by Jonathan H.
+    *********************************************************************-->
+
+<asp:Content runat="server" ID="firstPage" ContentPlaceHolderID="MainContent">
+    <asp:Label ID="lblError" runat="server" Text="" CssClass="auto-style5"></asp:Label>
+
+    <p>Your input counts. </p>
+    <hr />
+     <ol>
+         <li>
+             <%-- ----------------------Question One Panel BEGINS------------------------ --%> 
+                <asp:Panel ID="PanelYesNo" runat="server" Visible="False">
+     
+                <%-- the following code was used to display all teh questions from the database and is no necessary --%>
+               <%-- DT 09.21 The following code creates the grid with just the header and questions. 
+                It sets autogeneratecolumns to false to avoid populating the other columns like question IDs etc. 
+                   We no longer need to see the gridview>
+
+            <asp:GridView ID="GridView1" autogeneratecolumns="True" runat="server">
+                <Columns>
+                    <asp:BoundField DataField="QuestionText" HeaderText="Questions:" />
+                </Columns>
+            </asp:GridView> --%
+
+        
+
+            <%-- DT 09.21 I've commented the following code out to hide the drop down.
+                I've also deleted another smaller orphaned drop down  
+
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:aspnet-BrowardCollegeFeedback1-20140629104817ConnectionString %>" SelectCommand="SELECT * FROM [Question]"></asp:SqlDataSource>
+                <br />--%>
+        
+                <h2>
+                    <asp:Label ID="LabelYN" runat="server" Text="YES / NO"></asp:Label>
+                 <br />
+                 </h2>   
+        
+               <%-- NE_140924; <h1>* Did the Admissions staff clearly explain the steps and documentation needed for admission to Broward College?</h1> -- Remove label work with gridview --%>
+       
+        
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorYN" runat="server"
+                    ControlToValidate="RadioButtonListYN" ErrorMessage="Please choose one." Font-Bold="True" Font-Underline="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                        <asp:RadioButtonList ID="RadioButtonListYN" runat="server" RepeatDirection="Horizontal" Width="834px" TextAlign="Left">
+                        <asp:ListItem>Yes</asp:ListItem>
+                        <asp:ListItem>No</asp:ListItem>
+                    </asp:RadioButtonList>
+         
+                <asp:Button ID="ButtonSubmitYN" runat="server" Text="Submit" />
+                </asp:Panel>
+             <%-- ----------------------Question One Panel ENDS-------------------------- --%> 
+        </li>
+          <li>
+             <%-- ----------------------Question Two Panel BEGINS------------------------ --%> 
+                <asp:Panel ID="PanelRatings" runat="server" Visible="false">
+     
+               <%-- DT 09.21 The following code creates the grid with just the header and questions. 
+                It sets autogeneratecolumns to false to avoid populating the other columns like question IDs etc. 
+                   We no longer need to see the gridview
+
+            <asp:GridView ID="GridView2" autogeneratecolumns="True" runat="server">
+                <Columns>
+                    <asp:BoundField DataField="QuestionText" HeaderText="Questions:" />
+                </Columns>
+            </asp:GridView>  --%>
+
+        
+
+            <%-- DT 09.21 I've commented the following code out to hide the drop down.
+                I've also deleted another smaller orphaned drop down  
+
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:aspnet-BrowardCollegeFeedback1-20140629104817ConnectionString %>" SelectCommand="SELECT * FROM [Question]"></asp:SqlDataSource>
+                <br />--%>
+        
+                <h2>
+                    <asp:Label ID="LabelRat" runat="server" Text="Ratings"></asp:Label>
+                 <br />
+                 </h2>   
+        
+                    <%-- NE_140924; <h1>* How satisfied were you with the service you received?</h1> --%>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorRat" runat="server" ControlToValidate="RadioButtonListRat" ErrorMessage="Please choose one." Font-Bold="True" Font-Underline="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                    <br />
+                     <asp:RadioButtonList ID="RadioButtonListRat" runat="server" RepeatDirection="Horizontal" RepeatLayout="Table" CssClass="RBL" TextAlign="Left" Width="603px">
+                        <asp:ListItem>Very satisfied</asp:ListItem>
+                        <asp:ListItem>Satisfied</asp:ListItem>
+                        <asp:ListItem>Neutral</asp:ListItem>
+                        <asp:ListItem>Dissatisfied</asp:ListItem>
+                        <asp:ListItem>Very dissatisfied</asp:ListItem>
+                    </asp:RadioButtonList>
+
+                    <%--The following code was removed and replaced by the above code which now displays the rating buttons horizontally
+                        <asp:RadioButtonList ID="RadioButtonListRat" runat="server" TextAlign="Left" Width="603px">
+                        <asp:ListItem>Very dissatisfied</asp:ListItem>
+                        <asp:ListItem>Dissatisfied</asp:ListItem>
+                        <asp:ListItem>Neutral</asp:ListItem>
+                        <asp:ListItem>Satisfied</asp:ListItem>
+                        <asp:ListItem>Very satisfied</asp:ListItem>
+                    </asp:RadioButtonList> --%>
+                    <br />
+                    <asp:Button ID="ButtonSubmitRat" runat="server" Text="Submit" />
+        
+            </asp:Panel>
+             <%-- ----------------------Question Two Panel ENDS-------------------------- --%> 
+        </li>
+          <li>
+             <%-- --------------------------Question Three Panel BEGINS--------------------- --%> 
+                <asp:Panel ID="PanelComments" runat="server" Visible="false">
+     
+               <%-- DT 09.21 The following code creates the grid with just the header and questions. 
+                It sets autogeneratecolumns to false to avoid populating the other columns like question IDs etc. 
+                   We no longer need to see teh GridView
+
+            <asp:GridView ID="GridView3" autogeneratecolumns="True" runat="server">
+                <Columns>
+                    <asp:BoundField DataField="QuestionText" HeaderText="Questions:" />
+                </Columns>
+            </asp:GridView> --%>
+
+        
+
+            <%-- DT 09.21 I've commented the following code out to hide the drop down.
+                I've also deleted another smaller orphaned drop down 
+
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:aspnet-BrowardCollegeFeedback1-20140629104817ConnectionString %>" SelectCommand="SELECT * FROM [Question]"></asp:SqlDataSource>
+                <br /> --%>
+        
+                <h2>
+                    <asp:Label ID="LabelCmt" runat="server" Text="Any Additional Comment"></asp:Label>
+                 <br />
+                 </h2>   
+                 <br />
+                    &nbsp;<%-- NE_140924; <h1>Additional Comments</h1><br /> --%><asp:TextBox ID="TextBoxCmt" runat="server" Height="51px" Width="240px"></asp:TextBox>
+                    <asp:Button ID="ButtonSubmitCmt" runat="server" Text="Submit" />
+        
+
+
+            </asp:Panel>
+             <%-- --------------------------Question Three Panel ENDS----------------------- --%>   
+        </li>
+          <li>
+              <%-- --------------------------Question Four Panel BEGINS--------------------- --%> 
+                <asp:Panel ID="PanelAdmissions" runat="server" Visible="false">
+     
+                   <%-- DT 09.21 The following code creates the grid with just the header and questions. 
+                    It sets autogeneratecolumns to false to avoid populating the other columns like question IDs etc.  --%>
+                <asp:GridView ID="ddlQuestions" autogeneratecolumns="True" runat="server">
+                    <Columns>
+                        <asp:BoundField DataField="QuestionText" HeaderText="Questions:" />
+                    </Columns>
+                </asp:GridView>
+
+        
+
+                <%-- DT 09.21 I've commented the following code out to hide the drop down.
+                    I've also deleted another smaller orphaned drop down  --%>
+
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [Question]"></asp:SqlDataSource>
+                    <br />
+        
+                    <h1>
+                        <asp:Label ID="QuLabel1" runat="server" Text="Label"></asp:Label>
+                     <br />
+                     </h1>   
+        
+                   <%-- NE_140924; <h1>* Did the Admissions staff clearly explain the steps and documentation needed for admission to Broward College?</h1> -- Remove label work with gridview --%>
+       
+        
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                        ControlToValidate="RadioButtonList11" ErrorMessage="Please choose one." Font-Bold="True" Font-Underline="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+          
+       
+        
+                        <asp:RadioButtonList ID="RadioButtonList11" runat="server" RepeatDirection="Horizontal" Width="834px" TextAlign="Left">
+                            <asp:ListItem>Yes</asp:ListItem>
+                            <asp:ListItem>No</asp:ListItem>
+                        </asp:RadioButtonList>
+         
+                    <%-- NE_0923; Removed the following code…
+                    <asp:DropDownList ID="DropDownList3" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="QuestionText" DataValueField="QuestionId" Visible="False"></asp:DropDownList> 
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:aspnet-BrowardCollegeFeedback1-20140629104817ConnectionString %>' SelectCommand="SELECT * FROM [Question]"></asp:SqlDataSource> --%>
+         
+                    <%-- NE_140924; Puting question text into text box - no text box neede
+                    <asp:TextBox ID="TextBox10_Q2" runat="server" Width="717px"></asp:TextBox>
+                    <br /> --%> 
+        
+                        <%-- NE_140924; <h1>* How satisfied were you with the service you received?</h1> --%>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="RadioButtonList3" ErrorMessage="Please choose one." Font-Bold="True" Font-Underline="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RadioButtonList ID="RadioButtonList3" runat="server" TextAlign="Left" Width="603px">
+                            <asp:ListItem>Very dissatisfied</asp:ListItem>
+                            <asp:ListItem>Dissatisfied</asp:ListItem>
+                            <asp:ListItem>Neutral</asp:ListItem>
+                            <asp:ListItem>Satisfied</asp:ListItem>
+                            <asp:ListItem>Very satisfied</asp:ListItem>
+                        </asp:RadioButtonList>
+                        <br />
+                        &nbsp;<%-- NE_140924; <h1>Additional Comments</h1><br /> --%><asp:TextBox ID="TextBox4" runat="server" Height="51px" Width="240px"></asp:TextBox>
+                        <asp:Button ID="ButtonSubmit1" runat="server" Text="Submit" />
+        
+
+
+                </asp:Panel>
+              <%-- --------------------------Question Four Panel ENDS----------------------- --%>  
+        </li>
+           <li>
+             <%-- --------------------------Question Five Panel BEGINS--------------------- --%> 
+                <asp:Panel ID="PanelDone" runat="server" Visible="false">
+                <h4>You have completed all the questions. Click SUBMIT to post your answers</h4><br />
+                <asp:Button ID="ButtonDone" runat="server" Text="Submit" />
+            </asp:Panel>
+             <%-- --------------------------Question Five Panel ENDS----------------------- --%>  
+        </li>
+           <li>
+             <%-- --------------------------Question Six Panel BEGINS--------------------- --%> 
+            <asp:Panel ID="PanelSubmit" runat="server" Visible="false">
+               <h4>Thank you for participating in our brief Student Affairs survey. <br />Your survey has been successfully submitted.</h4>
+             </asp:Panel>
+             <%-- --------------------------Question Six Panel ENDS----------------------- --%>  
+        </li>
+    </ol>
+
+    
+
+    <%-- NE_140928; This panel is for ratings --%>
+    
+    
+    
+    <%-- NE_140928; THis panel is for comments --%>
+    
+    
+    <%-- NE_0923; moved Panel line to here, it was below the GridView  --%>
+    
+
+    <%-- code was removed here because it was used for the hard coded version which displayed 
+        different panels for each question. The three panel version replaces this code.--%>
+    
+    <%-- NE 10/07/14; THis panel is no longer used. It can be recalled for diagnostic purposes to stop the program before submitting the answers to the database --%>
+    
+
+    
+    <asp:Panel ID="PanelExit" runat="server" Visible="false">
+        <h4>You have chosen to EXIT without taking the survey. <br />We hope you will return soon and give us your feedback.</h4>
+    </asp:Panel>
+
+    <%-- This is the last panel --%>
+    
+
+</asp:Content>
+
+<%--<asp:Content ID="Content4" runat="server" contentplaceholderid="HeadContent">
+        <style type="text/css">
+    .auto-style4 {
+        padding-left: 30px;
+    }
+            .auto-style5 {
+                padding-left: 0;
+            }
+            .auto-style6 {
+                padding-left: -1px;
+            }
+        </style>
+</asp:Content>--%>

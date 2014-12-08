@@ -1,0 +1,25 @@
+﻿<%@ Master Language="VB" CodeFile="Site.Mobile.master.vb" Inherits="Site_Mobile" %>
+<!--*********************************************************************
+         Bug fixed by Jonathan H. (in Site.Mobile.master only; see other pages for more comments and bug fixes)
+         -------------------------------
+         -File excluded by Jonathan H.
+    *********************************************************************-->
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

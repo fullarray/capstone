@@ -1,0 +1,99 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeFile="Site.master.vb" Inherits="SiteMaster" %>
+<!--*********************************************************************
+         Bug fixed by Jonathan H. (in site.master only; see other pages for more comments and bug fixes)
+         -------------------------------
+         -Add meta tags
+         -Add reference to images and other styling files
+         -Prevent unnathorized users from logging in without a legit account
+         -Redirect users to the registration page if not logged in
+         -Use pure styling functionality for faster loading
+         -Add navigation link
+         -Add bottom links
+         -Add logo image and make it link to the home page
+         -Add classes for registrated user so it display user name while logged in
+         -Hide register link if user is logged in and authorized
+         -Remove background of links so the lokk can be consistent
+         -Design look and show to other group members
+         -Verify the site is responsive to mobile devices
+         -Remove unnecessary asp:content placeholder such as featured content placeholder
+         -Create custom styling classes so site and elements can resize and adjust screen to selected devices and resolutions
+    *********************************************************************-->
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Broward College Survey</title>
+    <asp:PlaceHolder runat="server">    
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, user-scalable=no;">
+    <meta name="author" content="Designed and Impletemented by Jonathan H. while participating in Group One Broward College Capstone 2014">
+    <meta name="dcterms.rightsholder" content="Jonathan H. Broward College Capstone 2014 Group 1">
+    <meta name="dcterms.rights" content="Jonathan H. and Broward College Capstone 2014 Group 1">
+    <meta name="dcterms.dateCopyrighted" content="2014">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+      <link rel="stylesheet" href="content/themes/custom/css/boot.min.css" />
+    <link rel="stylesheet" href="content/themes/custom/css/boot-responsive.min.css" />
+    <meta name="viewport" content="width=device-width" >
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body> 
+     <form runat="server">
+   
+        <header class="container custom-margin-top-15">
+        <div class="top-logo">
+           <a href="/"> <img class="displayed" alt="BC Logo" src="Images/BCLogo.png"/></a>
+        </div>
+            <div class="lead ">
+                <p class="top-title">Service Excellence Survey</p>
+            </div>
+        <div class="content-wrapper pull-right custom-margin-top-10 custom-margin-bottom-10">
+            <div class="float-right">
+                <section id="login">
+                    <asp:LoginView ID="LoginView2" runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul>
+                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>
+                                Hi, <a id="A3" runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                                    <asp:LoginName ID="LoginName2" runat="server" CssClass="username" />
+                                </a>!
+                                <asp:LoginStatus ID="LoginStatus2" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                            </p>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li><a id="A4"  runat="server" href="~/">Begin</a></li> |
+                        <li><a id="A5" runat="server" href="~/Survey/HomePage.aspx">Survey</a></li> |
+                        <li><a id="A6" runat="server" href="~/theteam.aspx">The Team</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+       </header>
+
+     <div class="container">
+    <div class="hero-unit">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </div>
+         </div>
+  
+    <div class="clearfix"></div>  
+
+      <footer class="container text-center">
+             <ul class="bottom-links">
+                <li><a href="http://www.broward.edu">About</a> <span class="block-separator">|</span></li>
+                 <li><a href="http://www.broward.edu">Privacy</a><span class="block-separator">|</span></li>
+                 <li><a href="http://www.broward.edu">Help</a></li>
+             </ul>
+      </footer>
+      </form> 
+</body>
+</html>
