@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is Broward College's Capstone course repository. This is for Group 1 only.
 ===============================================================================
 
@@ -29,3 +30,9 @@ Sit back and relax while your file is uploaded :)
 
 Thanks!(this is test 3)
 Test 4
+=======
+school
+======
+
+Dummy Repository
+>>>>>>> ee0eb2d045b7396e2c3ba63b0f5ecf69d2d11ff1
