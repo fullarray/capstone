@@ -4,6 +4,7 @@
 
 
 To submit your changes follow the commands below
+
 1. Git init 
 
 2. Git Add default.aspx (you can specify any file you change)
@@ -19,13 +20,18 @@ To submit your changes follow the commands below
 git username and password after "git push". 
 (Public Githubs accounts are free)
 
+--|Project Name | Members Number | Location
+--|------------ | --------------   ---------
+  |Broward College Survey System | 5 | Coconut Creek, FL
+Status | Finished
+
 
 
 Sit back and relax while your file is uploaded :)
 
 
 
-######The following were lines input by group members
+######The following were lines input by some group members
 
 ```
 Thanks!(this is test 3)
