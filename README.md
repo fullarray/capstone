@@ -1,11 +1,9 @@
-#Broward College's Group 1 Capstone Fall 2014 repository. 
+###Broward College's Group 1 Capstone Fall 2014 repository. 
 
 ![Broward College Logo] (https://github.com/fullarray/capstone/blob/master/final_prototype_beta/websites/browardcollegefeedback1/Images/BCLogo.png)
 
 
-##To submit your changes follow the commands below
-------------------------------------------------
-
+To submit your changes follow the commands below
 1. Git init 
 
 2. Git Add default.aspx (you can specify any file you change)
@@ -23,11 +21,11 @@ git username and password after "git push".
 
 
 
-##Sit back and relax while your file is uploaded :)
+Sit back and relax while your file is uploaded :)
 
 
 
-####The following were lines input by group members
+######The following were lines input by group members
 
 ```
 Thanks!(this is test 3)
