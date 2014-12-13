@@ -20,10 +20,10 @@ To submit your changes follow the commands below
 git username and password after "git push". 
 (Public Githubs accounts are free)
 
---|Project Name | Members Number | Location
---|------------ | --------------   ---------
-  |Broward College Survey System | 5 | Coconut Creek, FL
-Status | Finished
+X |Project Name | Members Number | Location
+--|------------ | -------------- | ---------
+X |Broward College Survey System | 5 | Coconut Creek, FL
+Status | Finished | |
 
 
 
