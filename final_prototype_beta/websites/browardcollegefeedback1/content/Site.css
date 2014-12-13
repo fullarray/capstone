@@ -162,6 +162,10 @@ footer {
     font-size: small;
 }
 
+.custom-md-title
+{
+    font-size: 20px;
+}
 .custom-substract-5
 {
     padding-top:0;

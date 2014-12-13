@@ -20,9 +20,10 @@
             <h4 class="media-heading">Maria Alejandra Batista</h4>
              <%-- ----------------------Maria Alejandra BatistaBEGINS------------------------ --%> 
               <ol>
-                   <li>Task</li>
-                   <li>Task</li>
-                   <li>Task</li>
+                   <li>Colaborated with written documentation</li>
+                   <li>Colaborated with group proposal and milestone</li>
+                   <li>Created final presentation</li>
+                   <li>Created non-code prototypes of application</li>
                </ol>
              <%-- ----------------------Maria Alejandra Batista ENDS-------------------------- --%> 
          </div>
@@ -32,9 +33,9 @@
             <h4 class="media-heading">Keiron Carty</h4>
                <%-- ----------------------Keiron Carty BEGINS------------------------ --%>   
                <ol>
-                   <li>Task</li>
-                   <li>Task</li>
-                   <li>Task</li>
+                   <li>Enabled Activate and Deactivate Questions</li>
+                   <li>Created Deactivate Sub implementation</li>
+                   <li>Colaborated with group proposal and milestone</li>
                </ol>
                <%-- --------------------------Keiron Carty ENDS------------------------- --%>
          </div>
@@ -44,9 +45,9 @@
             <h4 class="media-heading">Beaudelaire Dussuau</h4>
              <%-- --------------------------Beaudelaire Dussuau BEGINS--------------------- --%>   
               <ol>
-                   <li>Task</li>
-                   <li>Task</li>
-                   <li>Task</li>
+                   <li>Combine questions</li>
+                   <li>Enable Coral Spring radio Button</li>
+                   <li>Colaborated with group proposal and milestone</li>
                </ol>
              <%-- --------------------------Beaudelaire Dussuau ENDS----------------------- --%>   
          </div>
@@ -56,9 +57,9 @@
             <h4 class="media-heading">Otavio Vitali</h4>
              <%-- --------------------------Otavio Vitali BEGINS--------------------- --%>   
                 <ol>
-                   <li>Task</li>
-                   <li>Task</li>
-                   <li>Task</li>
+                   <li>Wrote all paper documentation</li>
+                   <li>Changed survey question radio buttons to drop lists</li>
+                   <li>Colaborated with group proposal and milestone</li>
                </ol>
              <%-- --------------------------Otavio Vitali ENDS----------------------- --%>   
          </div>
@@ -68,16 +69,27 @@
             <h4 class="media-heading">Jonathan H.</h4>
              <%-- --------------------------Jonathan H. BEGINS--------------------- --%>   
                 <ol>
-                   <li>Task</li>
-                    <li>hello
+                   <li>Designed application prototype in code</li>
+                    <li>Coded main and subnavigation menus
                         <ol>
-                           <li>Task</li>
-                           <li>Task</li>
-                           <li>Task</li>
+                           <li>Cleaned, organized, and designed menu functionalities in code</li>
+                           <li>Linked pages to menus</li>
+                           <li>Made the menu responsive</li>
                          </ol>
                     </li>
-                   <li>Task</li>
-                   <li>Task</li>
+                   <li>Consolidated pages and made questions display in one page.</li>
+                   <li>Created coherent user interface(UI)</li>
+                   <li>Created coherent user experience(UX)</li>
+                   <li>Refactor VB code in defaults.aspx.vb so Coral Springs work</li>
+                   <li>Deleted unnecessary files and pages</li>
+                   <li>Clean or complete code inconsistencies and unclosed tags</li>
+                   <li>Reorganized the project folders and pages</li>
+                    <li>Placed the survey in one directory</li>
+                    <li>Enabled accounts, registration, and user administration</li>
+                    <li>Restricted survey area to authenticated users only</li>
+                    <li>Made the entire application responsive</li>
+                     <li>Colaborated with group proposal and milestone</li>
+                    <li>Colaborated with written documentation</li>
                </ol>
              <%-- --------------------------Jonathan H. ENDS----------------------- --%>   
          </div>

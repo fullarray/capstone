@@ -2,6 +2,13 @@
 
 <asp:Content runat="server" ID="Survey" ContentPlaceHolderID="MainContent" >
      <%--*********************************************************************
+         Bug fixed by Beaudelaire Dussuau (in default.aspx only)
+         -------------------------------
+         -Enabled Corap Spring radio button
+         -Combined questions
+         
+         ================================================================================================
+
          Bug fixed by Jonathan H. (in default.aspx only; see other files for more comments and bug fixes)
          -------------------------------
          -create a paging panel mini functionality. Hide pageTwo panel.
@@ -27,13 +34,13 @@
     *********************************************************************--%>
 <asp:panel runat="server" ID="PageOne">
     <asp:Label ID="lblError" runat="server" Text="" CssClass="auto-style5"></asp:Label>
-             <p><strong>Broward College Survey</strong></p>  
-      <p >Want to start now? 3 easy steps to get started.</p>
+             <p class="custom-md-title"><strong>BROWARD COLLEGE SURVEY</strong></p>  
+      <p >Rate Your Satisfaction.</p>
     <hr /> 
     <ul class="media-list">
          <li class="media">
          <div class="media-body">
-             <h4 class="media-heading">Step 1</h4>
+             <h4 class="media-heading">Step 1 of 3: Select a campus.</h4>
              <%-- ----------------------Select Campus Panel BEGINS------------------------ --%> 
               <asp:Panel ID="PanelCampus" runat="server" Visible="true">
  
@@ -60,7 +67,7 @@
         </li>
           <li class="media">
          <div class="media-body">
-           <h4 class="media-heading">Step 2</h4>
+           <h4 class="media-heading">Step 2 of 3: Select a service</h4>
                <%-- ----------------------North Campus Panel BEGINS------------------------ --%>   
                 <asp:Panel ID="PanelServiceNorth" runat="server" Visible="false">
                   
@@ -112,7 +119,7 @@
         </li>
           <li class="media">
          <div class="media-body">
-           <h4 class="media-heading ">Step 3</h4>
+           <h4 class="media-heading ">Step 3 of 3: Select an action.</h4>
              <%-- --------------------------Before Survey Menu Panel BEGINS--------------------- --%>   
                <asp:Panel ID="PanelContinue" runat="server" Visible="false">
                     
@@ -136,8 +143,8 @@
     </asp:panel>
     <asp:Panel runat="server" ID="PageTwo" Visible="false" >
       <asp:Label ID="Label1" runat="server" Text="" CssClass="auto-style5"></asp:Label>
-      <p><strong>Broward College Survey</strong></p>  
-      <p >Survey Starts Here</p>
+       <p class="custom-md-title"><strong>BROWARD COLLEGE SURVEY</strong></p>  
+      <p >Your Opinion Counts</p>
       <hr /> 
     <ul class="media-list">
           <li class="media">

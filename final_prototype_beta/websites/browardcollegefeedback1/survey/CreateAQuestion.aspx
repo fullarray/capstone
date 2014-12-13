@@ -79,10 +79,10 @@
 <br />
 
 
-    <asp:TextBox style="margin:auto" ID="TextBox1" runat="server" Height="109px" Width="339px"></asp:TextBox>
+    <asp:TextBox style="margin:auto" ID="TextBox1" runat="server" Height="109px" Width="339"></asp:TextBox>
         <br />
  <br />
-    <asp:Button style="margin:auto" ID="Button1" runat="server" Text="Submit" Width="107px" />
+    <asp:Button style="margin:auto" ID="Button1" runat="server" Text="Submit"/>
         
  
 
@@ -106,7 +106,7 @@
 
 
 
-    <asp:Button style="margin:auto" ID="Button2" runat="server" Text="Deactivate" Width="107px"  />
+    <asp:Button style="margin:auto" ID="Button2" runat="server" Text="Deactivate"  />
 
 
 
@@ -128,7 +128,7 @@
     
     <br />
     <br />
-<asp:Button style="margin:auto" ID="Button7" runat="server" Text="Activate" Width="107px" />
+<asp:Button style="margin:auto" ID="Button7" runat="server" Text="Activate" />
     <br />
     <br />
 &nbsp;<br />
@@ -155,12 +155,11 @@
            <asp:ListItem>Very satisfied</asp:ListItem>
            </asp:RadioButtonList>
         <br />
-        <br />
         <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="Medium" Font-Underline="True" Text="Example of Text Box:"></asp:Label>
         <br />
     <asp:Panel ID="PanelTextBox" runat="server" Visible="true">
-         &nbsp;<h4>Please add your comments here:</h4><br />
-        <asp:TextBox ID="TextBox3" runat="server" Height="51px" Width="240px" active="false"></asp:TextBox>
+         &nbsp;<h4>Please add your comments here:</h4>
+        <asp:TextBox ID="TextBox3" runat="server" Height="109px" Width="339" active="false"></asp:TextBox><br />
         <asp:Button ID="ButtonText" runat="server" Text="Submit" />
         </asp:Panel>
 </asp:Content>
