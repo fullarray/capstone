@@ -19,10 +19,10 @@ git username and password after "git push".
 (Public Githubs accounts are free)
 
 
-Project Name | Members Number | Location | Course |
+Project Name | Members | Location | Course |
 ------------ | -------------- | ---------|--------|
-Broward College Survey System | 5 | Coconut Creek, FL | Casptone CIS4596
-Status                        | Finished |
+Broward College Survey System | 5 | Coconut Creek, FL | Capstone CIS4596
+Status                        | | | Finished
 
 
 
