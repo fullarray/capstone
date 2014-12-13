@@ -1,5 +1,3 @@
-###Broward College's Group 1 Capstone Fall 2014 repository. 
-
 ![Broward College Logo] (https://github.com/fullarray/capstone/blob/master/final_prototype_beta/websites/browardcollegefeedback1/Images/BCLogo_github.jpg)
 
 
@@ -20,10 +18,12 @@ To submit your changes follow the commands below
 git username and password after "git push". 
 (Public Githubs accounts are free)
 
+
 Project Name | Members Number | Location
 ------------ | -------------- | ---------
 Broward College Survey System | 5 | Coconut Creek, FL
-Status                        | Finished |
+Status                        | Finished 
+
 
 
 Sit back and relax while your file is uploaded :)
