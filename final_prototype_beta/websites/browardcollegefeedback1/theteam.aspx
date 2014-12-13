@@ -12,7 +12,7 @@
 
     *********************************************************************--%>
     <p><strong>Broward College Survey</strong></p>  
-       <p>Group One 2014 - Tasks and Roles </p>
+       <p>Group One Fall 2014: Tasks and Roles </p>
     <hr />
     <ul class="media-list">
          <li class="media">

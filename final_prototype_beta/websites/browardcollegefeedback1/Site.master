@@ -90,8 +90,8 @@
       <footer class="container text-center">
              <ul class="bottom-links">
                 <li><a href="http://www.broward.edu">About</a> <span class="block-separator">|</span></li>
-                 <li><a href="http://www.broward.edu">Privacy</a><span class="block-separator">|</span></li>
-                 <li><a href="http://www.broward.edu">Help</a></li>
+                 <li><a href="privacy.aspx">Privacy</a><span class="block-separator">|</span></li>
+                 <li><a href="theteam.aspx">The Team</a></li>
              </ul>
       </footer>
       </form> 
